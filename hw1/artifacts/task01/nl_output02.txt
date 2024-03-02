@@ -1,0 +1,17 @@
+a-kuzdnets@a-kuzdnets:~/python-homework/hw1$ nl -b a task01/main.py
+     1  import sys
+     2
+     3
+     4  stdin_fname = '-'
+     5
+     6  def process_file(f):
+     7      for line_no, line in enumerate(f):
+     8          print('%6d\t' % tuple([line_no + 1]), end="")
+     9          print(line, end="")
+    10
+    11  if len(sys.argv) == 1 or sys.argv[1] == stdin_fname:
+    12      process_file(sys.stdin)
+    13  else:
+    14      with open(sys.argv[1]) as f:
+    15          process_file(f)
+a-kuzdnets@a-kuzdnets:~/python-homework/hw1$ 

@@ -1,0 +1,11 @@
+a-kuzdnets@a-kuzdnets:~/python-homework/hw1$ python3 task03/main.py - task02/main.py
+def process_file(f):
+    content = f.read()
+    lines = len(content.split("\n")) - 1
+    words = len(content.split())
+    bytes = len(content)
+    return lines, words, bytes
+      6      20     174 -
+     23      75     696 task02/main.py
+     29      95     870 total
+a-kuzdnets@a-kuzdnets:~/python-homework/hw1$

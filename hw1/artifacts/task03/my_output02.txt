@@ -1,0 +1,3 @@
+a-kuzdnets@a-kuzdnets:~/python-homework/hw1$ python3 task03/main.py task02/main.py
+ 23  75 696 task02/main.py
+a-kuzdnets@a-kuzdnets:~/python-homework/hw1$

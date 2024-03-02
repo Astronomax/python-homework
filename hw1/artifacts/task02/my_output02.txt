@@ -1,0 +1,45 @@
+a-kuzdnets@a-kuzdnets:~/python-homework/hw1$ python3 task02/main.py - task02/main.py
+==> standard input <==
+files = sys.argv[1:]
+if len(files) == 0:
+    files.append(stdin_fname)
+
+lines_total = 0
+words_total = 0
+bytes_total = 0
+
+number_width = compute_number_width(files)
+for f_name in files:
+    if f_name == stdin_fname:
+        lines, words, bytes = process_file(sys.stdin)
+    else:
+        with open(f_name) as f:
+            lines, words, bytes = process_file(f)
+    write_counts(lines, words, bytes, f_name)
+    lines_total += lines
+    words_total += words
+    bytes_total += bytes
+if len(files) > 1:
+    write_counts(lines_total, words_total, bytes_total, "total")
+        lines, words, bytes = process_file(sys.stdin)
+    else:
+        with open(f_name) as f:
+            lines, words, bytes = process_file(f)
+    write_counts(lines, words, bytes, f_name)
+    lines_total += lines
+    words_total += words
+    bytes_total += bytes
+if len(files) > 1:
+    write_counts(lines_total, words_total, bytes_total, "total")
+
+==> task02/main.py <==
+            prefix = "" if first_file else "\n"
+            print(f"{prefix}==> {pretty_filename} <==\n", end="")
+            first_file = False
+        if f_name == stdin_fname:
+            tail_file(sys.stdin, 10)
+        else:
+            with open(f_name) as f:
+                tail_file(f, 10)
+else:
+    tail_file(sys.stdin, 17)a-kuzdnets@a-kuzdnets:~/python-homework/hw1$

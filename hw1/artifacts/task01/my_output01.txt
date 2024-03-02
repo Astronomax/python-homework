@@ -1,0 +1,14 @@
+a-kuzdnets@a-kuzdnets:~/python-homework/hw1$ python3 task01/main.py
+def process_file(f):
+    content = f.read()
+    li     1    def process_file(f):
+     2      content = f.read()
+nes = len(content.split("\n")) - 1
+    words = len     3       lines = len(content.split("\n")) - 1
+(content.split())
+    bytes = len(content)
+    ret     4       words = len(content.split())
+     5      bytes = len(content)
+urn lines, words, bytes
+     6      return lines, words, bytes
+a-kuzdnets@a-kuzdnets:~/python-homework/hw1$

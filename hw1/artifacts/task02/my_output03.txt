@@ -1,0 +1,11 @@
+a-kuzdnets@a-kuzdnets:~/python-homework/hw1$ python3 task02/main.py task02/main.py
+            prefix = "" if first_file else "\n"
+            print(f"{prefix}==> {pretty_filename} <==\n", end="")
+            first_file = False
+        if f_name == stdin_fname:
+            tail_file(sys.stdin, 10)
+        else:
+            with open(f_name) as f:
+                tail_file(f, 10)
+else:
+    tail_file(sys.stdin, 17)a-kuzdnets@a-kuzdnets:~/python-homework/hw1$

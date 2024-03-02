@@ -1,0 +1,9 @@
+a-kuzdnets@a-kuzdnets:~/python-homework/hw1$ wc
+def process_file(f):
+    content = f.read()
+    lines = len(content.split("\n")) - 1
+    words = len(content.split())
+    bytes = len(content)
+    return lines, words, bytes
+      6      20     174
+a-kuzdnets@a-kuzdnets:~/python-homework/hw1$
