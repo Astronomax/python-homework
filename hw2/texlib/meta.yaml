@@ -1,0 +1,38 @@
+{% set name = "texlib" %}
+{% set version = "1.0.0" %}
+
+package:
+  name: "{{ name|lower }}"
+  version: "{{ version }}"
+
+source:
+  path: .
+
+build:
+  number: 0
+  script: "{{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation"
+
+requirements:
+  host:
+    - pip
+    - python
+  run:
+    - python
+
+test:
+  # Python imports
+  imports:
+    - texlib
+
+about:
+  home: The package home page
+  license: BSD
+  license_family: BSD
+  license_file: 
+  summary: "Latex generator"
+  doc_url: 
+  dev_url: 
+
+extra:
+  recipe-maintainers:
+    - Astronomax
